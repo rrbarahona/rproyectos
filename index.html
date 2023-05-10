@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilos.css"
 </head>
 <body>
-    <header class="cabeceraPrincipal">
+    <header class="cabeceraPrincipal" id="inicio">
         <section class="logo">
             <img src="images/logotipo.png" title="Logotipo de Atractivos Turisticos">
         </section>
@@ -17,37 +17,74 @@
         </section>
     </header>
     <nav class="menuPrincipal">
-        <a href="">Inicio</a>
-        <a href="">Atractivos</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#atractivos">Atractivos</a>
         <a href="">Gastronomía</a>
-        <a href="">Cultura</a>
-        <a href="">Hoteles</a>
-        <a href="">Contactos</a>
+        <a href="internas/cultura.php">Cultura</a>
+        <a href="#hoteles">Hoteles</a>
+        <a href="#contactos">Contactos</a>
     </nav>
-    <section>
-        Galeria
+    <section class="Slider">
+        <img src="images/slider.jpg">
     </section>
-    <section>
-        <section>
-            Titulos
+    <section class="contenedor">
+        <div class="espacio"></div>
+        <h2 class="titulosH2" id="atractivos">Atractivos Turisticos</h2>
+        <p class="slogan">Conoce los mejores lugares turísticos del Ecuador</p>
+        <section class="atractivos">
+            <article>
+                <img src="images/image1.jpg">
+            </article>
+            <article>
+                <img src="images/image2.jpg">
+            </article>
+            <article>
+                <img src="images/image3.jpg">
+            </article>
+            <article>
+                <img src="images/image4.jpg">
+            </article>
         </section>
-        <section>
-            Post
+        <div class="espacio"></div>
+        <h2 class="titulosH2" id="hoteles">Recursos Hoteleros</h2>
+        <p class="slogan">Conoce los mejores hoteles del Ecuador</p>
+        <section class="hoteles">
+            <article>
+                <img src="images/hotel1.jpg" alt="">
+            </article>
+            <article>
+                <img src="images/hotel2.jpg" alt="">
+            </article>
         </section>
     </section>
-    <section>
-        <section>
-            Titulos hoteles
-        </section>
-        <section>
-            Post
-        </section>
-    </section>
-    <aside>
-        Sponsor
+    <div class="espacio"></div>
+    <aside class="sponsor">
+        <img src="images/logo1.png">
+        <img src="images/logo2.png">
     </aside>
-    <footer>
-        Pie de pagina
+    <footer class="piePagina" id="contactos">
+        <section>
+            <img src="images/logotipo2.png">
+            <p>Derechos Reservados 2023</p>
+        </section>
+        <section>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#atractivos">Atractivos</a></li>
+                <li><a href="#inicio">Gastronomía</a></li>
+                <li><a href="#inicio">Cultura</a></li>
+                <li><a href="#hoteles">Hoteles</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </section>
+        <section>
+            <p>
+                0985215892<br>
+                0985925821<br>
+                mailto: info@sabirm.com<br>
+                Loja - Ecuador
+            </p>
+        </section>
     </footer>
 </body>
 </html>

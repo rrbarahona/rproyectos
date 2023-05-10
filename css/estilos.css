@@ -3,6 +3,9 @@
     padding: 0;
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Roboto', sans-serif;
     background: #fff;
@@ -35,3 +38,122 @@ nav.menuPrincipal a:hover{
     color:#3FD664;
     background: #F9F9F9;
 }
+.Slider, .contenedor, .sponsor{
+    width: 90%;
+    margin: 0 auto;
+}
+.Slider img{
+    width: 100%;
+}
+.atractivos, .hoteles{
+    display: flex;
+    justify-content: space-evenly;
+}
+.titulosH2{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 0px;
+    letter-spacing: 0.235em;
+    color: #07BB91;
+    height: 50px;
+    text-align: center;
+    padding: 2em 0 0 0;    
+}
+.slogan{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 0px;
+    text-align: center;
+    letter-spacing: 0.22em;
+    color: #655454;
+    padding: 0 0 2em 0;
+}
+.sponsor{
+    background-color: #42E396;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sponsor img{
+    padding: 3em 0;
+}
+.espacio{
+    padding: 2em;
+}
+.piePagina{
+    background-color: #2C2B2B;
+    color: #E2E2E2;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 177%;
+    letter-spacing: 0.16em;
+}
+.piePagina section{
+    padding: 3em 0;
+}
+.piePagina a{
+    color: #E2E2E2;
+    text-decoration: none;
+}
+
+.grupoForm{
+    width: 80%;
+    padding: 0.5em 1em;
+}
+label{
+    color: #333;
+    font-size: 12px; 
+}
+input[type:"text"], input[type:"email"], input[type:"date"]{
+    width: 50%;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+}
+.boton1{
+    background-color: #0065FC;
+    color: #fff;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    padding: 1em 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    .atractivos, .hoteles{
+        display: block;        
+    }
+    .atractivos img{
+        width: 100%;
+    }
+    .titulosH2{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 20px;
+        letter-spacing: 0.235em;
+        color: #07BB91;
+        height: 50px;
+        text-align: center;
+        padding: 2em 0 0 0;    
+    }
+    .slogan{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.22em;
+        color: #655454;
+        padding: 0 0 2em 0;
+    }
+    .sponsor{
+        display: block;       
+        text-align: center; 
+    }
+    .sponsor img{
+        width: 20%;
+    }
