@@ -81,6 +81,8 @@ nav.menuPrincipal a:hover{
 .espacio{
     padding: 2em;
 }
+
+
 .piePagina{
     background-color: #2C2B2B;
     color: #E2E2E2;
@@ -99,21 +101,68 @@ nav.menuPrincipal a:hover{
     text-decoration: none;
 }
 
+
+.formulario{
+    display: flex;
+}
+.box2{
+    width: 95%;
+}
+
+
 .grupoForm{
-    width: 80%;
+    width: 95%;
     padding: 0.5em 1em;
 }
-label{
-    color: #333;
-    font-size: 12px; 
+.horizontal{
+    display: flex;
+    padding: 1em 0.5em;
 }
-input[type:"text"], input[type:"email"], input[type:"date"]{
-    width: 50%;
-    height: 30px;
+label{
+    color: #4265D6;
+    font-size: 12px; 
+    display: block;
+}
+.formulario input, .formulario select{
+    width: 95%;
+    margin-bottom: 5px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 52px;
     padding-left: 10px;
-    border: 1px solid #bbbbbb;
+    border: 1px solid #BBBBBB;
     border-radius: 5px;
 }
+.formulario input[type="radio"], .formulario input[type="checkbox"] {
+    width: 5%;
+    margin-bottom: 5px;
+    height: 15px;
+    font-size: 12px;
+    line-height: 52px;
+    text-align: center;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+}
+form .btn-submit{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #5E7DE3;
+    border-radius: 3px;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+form .btn-submit:hover{
+    background: rgba(94,125,227, .9);
+}
+.identado{
+    padding: 0 0 0 20px;
+}
+
 .boton1{
     background-color: #0065FC;
     color: #fff;
@@ -155,5 +204,6 @@ input[type:"text"], input[type:"email"], input[type:"date"]{
         text-align: center; 
     }
     .sponsor img{
-        width: 20%;
+        width: 40%;
     }
+}

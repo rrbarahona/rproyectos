@@ -27,43 +27,34 @@
     </nav>
     <section class="contenedor">
         <div class="espacio"></div>
-        <h2 class="titulosH2" id="atractivos">FORMULARIO DE REGISTRO</h2>
-        <form action="validar.php" method="post" class="formulario">
-            <div class="box2">
-                <div class="grupoForm">
-                    <label for="nombres">Nombres: </label>
-                    <input type="text" name="nombres" id="nombres" placeholder="Ingrese sus nombres completos" required>
-                </div>
-                <div class="grupoForm">
-                    <label for="apellidos">Apellidos: </label>
-                    <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus apellidos completos">
-                </div>   
-                <div class="grupoForm">
-                    <label for="correo">Correo</label>
-                    <input type="email" name="correo" id="correo" placeholder="Ingrese su correo electronico">
-                </div>  
-            </div>
-            <div class="box2">
-                <div class="grupoForm">
-                    <label for="dni">Cédula / DNI</label>
-                    <input type="number" name="dni" id="dni">
-                </div>
-                <div class="grupoForm">
-                    <label for="rol">Rol</label>
-                    <select name="rol" id="rol">
-                        <option value="1">Administrador</option>
-                        <option value="2">Usuario normal</option>
-                    </select>
-                </div>
-                <div class="grupoForm">
-                    <label for="clave">Clave</label>
-                    <input type="password" name="clave" id="clave" placeholder="Ingrese su clave">                    
-                </div>                
-                <div class="grupoForm">
-                    <button class="boton1" type="submit">Guardar</button>
-                </div>
-            </div>
-        </form>          
+        <h2 class="titulosH2" id="atractivos">LISTADO DE REGISTROS DE USUARIOS</h2>
+        <?php
+            include("../dll/config.php");
+            include("../dll/mysql.php");
+
+            $sql = "select * from usuarios";
+            $result = mysqli_query($conn,$sql);
+            if ($result) {
+                echo "<table border=1>";
+                echo "<tr>";
+                    echo "<td>ID</td>";
+                    echo "<td>Nombres</td>";
+                    echo "<td>Apellidos</td>";
+                    echo "<td>Cédula</td>";
+                    echo "<td>Rol</td>";
+                    echo "<td>Correo</td>";
+                echo "</tr>";    
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<tr>";
+                    for ($i=0; $i < 6; $i++) { 
+                        echo " <td> ".$row[$i]."</td>";
+                    }
+                    echo "<tr>";
+                }
+                echo "<table>";
+            }
+            mysqli_close($conn);
+        ?>
     </section>
 
     <div class="espacio"></div>
