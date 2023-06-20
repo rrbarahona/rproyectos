@@ -81,5 +81,14 @@
             }
             echo "</table>";
         }
+
+        function consulta_lista(){
+            while ($row=mysqli_fetch_array($this->Consulta_ID)) {                
+                for ($i=0; $i < $this->numcampos(); $i++) { 
+                    $row[$i];
+                }
+                return $row;
+            }
+        }
     }
 ?>
